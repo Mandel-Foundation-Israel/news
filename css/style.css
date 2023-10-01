@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #eee;
+    margin: 1rem;
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrap {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.wrap article {
+    background: white;
+    padding: 1rem;
+}
+
+.wrap :is( header, footer ) {
+    font-size: .75rem;
+}
+
+.date {
+    font-size: .85rem;
+    color: #888;
+}
+
+.byline {
+    font-size: 1.2rem;
+}
+
+h1 {
+    margin: 0;
+}
+
+.article-image img {
+    width: 100%;
+}
+
+.article-body {
+    padding-top: 2rem;
+    clear: both;
+}
+
+.article-content {
+    max-width: 640px;
+}
+
+.article-content > p:first-child {
+    margin-top: 0;
+}
+
+.article-attachments ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.article-attachments figure {
+    margin: 0;
+    clear: both;
+}
+
+.article-attachments figure::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.article-attachments img {
+    max-width: 60px;
+    float: right;
+    margin-inline-end: 1rem;
+}
+
+.article-attachments figcaption {
+    font-size: .8rem;
+    margin-inline-start: calc( 60px + 1rem );
+}
+
+.article-attachments a {
+    color: #888;
+    text-decoration: none;
+}
+
+.article-attachments li {
+    margin-bottom: 1rem;
+    clear: both;
+}
+
+@media ( min-width: 960px ) {
+    body {
+        margin: 2.5rem;
+    }
+    .article-image {
+        float: right;
+        width: 50%;
+        margin-inline-end: 1rem;
+    }
+    .article-body {
+        clear: both;
+        display: flex;
+    }
+    .article-attachments {
+        max-width: calc( 100% - 640px - 2rem );
+        margin-inline-start: 1rem;
+        border-inline-start: 1px solid #888;
+        padding-inline-start: 1rem;
+    }
+}
+
+@media ( max-width: 959px ) {
+    .article-attachments {
+        margin-top: 2rem;
+        border-top: 1px solid #888;
+        padding-top: 1rem;
+    }
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  /* ideally, transition speed should match zoom duration */
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
