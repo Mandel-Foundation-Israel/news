@@ -17,11 +17,28 @@ img {
     margin: 0 auto;
 }
 
+.wrap header .article-source {
+    float: right;
+}
+
+.wrap header .other-lang {
+    float: left;
+}
+
+html[dir="ltr"] .article-source {
+    float: left;
+}
+
+html[dir="ltr"] .other-lang {
+    float: right;
+}
+
 .wrap article {
     background: white;
     padding: 1rem;
 }
 
+.wrap header::after,
 .wrap article::after {
     content: "";
     display: table;
