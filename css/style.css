@@ -22,6 +22,17 @@ img {
     padding: 1rem;
 }
 
+.wrap article::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.wrap article > a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .wrap :is( header, footer ) {
     font-size: .75rem;
 }
@@ -78,6 +89,10 @@ h1 {
     margin-inline-end: 1rem;
 }
 
+html[dir="ltr"] .article-attachments img {
+    float: left;
+}
+
 .article-attachments figcaption {
     font-size: .8rem;
     margin-inline-start: calc( 60px + 1rem );
@@ -93,6 +108,11 @@ h1 {
     clear: both;
 }
 
+article iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
 @media ( min-width: 960px ) {
     body {
         margin: 2.5rem;
@@ -101,6 +121,9 @@ h1 {
         float: right;
         width: 50%;
         margin-inline-end: 1rem;
+    }
+    html[dir="ltr"] .article-image {
+        float: left;
     }
     .article-body {
         clear: both;
